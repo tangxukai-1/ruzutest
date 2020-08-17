@@ -1,7 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "add.h"
+#include "sub.h"
+
 float add(float a, float b);
+float sub(float a, float b);
 
 int main(int argc, char *argv[])
 {
