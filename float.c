@@ -9,16 +9,27 @@ float sub(float a, float b);
 int main(int argc, char *argv[])
 {
 	float x,y,z;
-	
-	if(argc == 3){
-		y = atof(argv[1]);
-		z = atof(argv[2]);
-		x = add(y, z);
-		printf("%f\n",x);
+	char tp;
+	printf("Please enter formula like 'a + b':");
+
+	while(scanf("%f %c %f", &x, &tp, &y) == 3){
+		if(tp == '+'){
+			z = add(x, y);
+			printf("Result: %f\n",z);
+			continue;
+		}
+		else if(tp == '-'){
+			z = sub(x, y);
+			printf("Result: %f\n",z);
+			continue;
+		}
+		else{
+			printf("Can't recognize! Exit!\n");
+			break;
+		}
 	}
-	else{
-		printf("!");
-		return 1;
-	}
+
+	printf("Thank you !\n");
+
 	return 0;
 }
