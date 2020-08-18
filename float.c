@@ -1,5 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "add.h"
 #include "sub.h"
 
@@ -13,6 +11,12 @@ int main(int argc, char *argv[])
 	printf("Please enter formula like 'a + b':");
 
 	while(scanf("%f %c %f", &x, &tp, &y) == 3){
+
+//		printf("%f %c %f ",x,tp,y);
+
+
+
+
 		if(tp == '+'){
 			z = add(x, y);
 			printf("Result: %f\n",z);
